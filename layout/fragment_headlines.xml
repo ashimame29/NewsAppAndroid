@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Headlines">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/headlineTablayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:tabTextColor="@color/colorPrimary"
+        app:tabMode="scrollable">
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/headlineWorld"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="WORLD"/>
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/headlineBusiness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BUSINESS"/>
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/headlinePolitics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="POLITICS"/>
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/headlineSports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SPORTS"/>
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/headlineTechnology"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TECHNOLOGY"/>
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/headlineScience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SCIENCE"/>
+
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headlineTablayout"
+        android:id="@+id/swiperefresh_headlines"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".HomeFragment"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHeadlines"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ProgressBar
+            android:id="@+id/activityIndicatorHeadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorPrimary"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/fetchnews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activityIndicatorHeadline"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

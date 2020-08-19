@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="4dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+        <TextView
+            android:id="@+id/textHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="Heading"
+            />
+        <TextView
+            android:id="@+id/textDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Desc"
+            />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="5dp"
+    card_view:cardMaxElevation="15dp"
+    card_view:cardElevation="10dp"
+    android:id="@+id/cardHome">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/relative_layout"
+        >
+
+        <ImageView
+            android:id="@+id/homeImage"
+            android:layout_width="113dp"
+            android:layout_height="113dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/homeHeading"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/homeImage"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/homeHeading"
+            android:id="@+id/bookmarkIconHome"
+             />
+        <TextView
+            android:id="@+id/homeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/homeImage"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            />
+        <TextView
+            android:id="@+id/pipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/homeDate"
+            android:text="|"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            />
+        <TextView
+            android:id="@+id/homeSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/pipe"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".TrendingFragment">
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchText"
+        android:text="Enter Search Term:"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"/>
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/searchText"
+        android:ems="17"
+        android:hint="Coronavirus"
+        app:backgroundTint="@color/colorPrimary"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionSend"
+        android:singleLine="true"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:layout_width="match_parent"
+        android:layout_below="@+id/editText"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/line_chart"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ProgressBar
+            android:id="@+id/activityIndicatorTrending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorPrimary"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/fetchTrends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activityIndicatorTrending"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>
